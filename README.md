@@ -1,1 +1,8 @@
-# Moustache-Republic
+
+# Install
+
+`yarn`
+
+# Development
+
+`yarn dev`

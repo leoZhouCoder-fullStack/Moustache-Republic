@@ -1,0 +1,4 @@
+# /node_modules/*  ignored by default
+# Ignore built files except build/index.js
+apollo/apollo.tsx
+components/PDFEditor/webviewer.d.ts
