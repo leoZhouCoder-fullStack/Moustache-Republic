@@ -24,8 +24,8 @@ const Cart = () => {
   return (
     <div className="relative h-full w-auto inline-block z-10 flex flex-col">
       <div
-        className={`h-full w-auto inline-block flex items-center justify-center text-xl cursor-pointer z-20 p-2 border-opacity-0 border-light-grey border ${
-          currentCartState.open ? 'bg-white border-opacity-100' : ''
+        className={`h-full w-auto inline-block flex items-center justify-center text-xl cursor-pointer z-20 p-4 border-opacity-0 border-light-grey border ${
+          currentCartState.open && orderNum > 0 ? 'bg-white border-opacity-100' : ''
         }`}
         onClick={() => {
           setCartState(preState => {
@@ -33,14 +33,14 @@ const Cart = () => {
           })
         }}
         onMouseOver={() => {
-          setCartState(preState => {
-            return { ...preState, open: true }
-          })
+          // setCartState(preState => {
+          //   return { ...preState, open: true }
+          // })
         }}
         onMouseLeave={() => {
-          setCartState(preState => {
-            return { ...preState, open: false }
-          })
+          // setCartState(preState => {
+          //   return { ...preState, open: false }
+          // })
         }}
         style={{ borderBottomColor: '#ffffff' }}
       >
@@ -50,7 +50,7 @@ const Cart = () => {
       </div>
 
       {orderNum > 0 && currentCartState.open && (
-        <div className="absolute ml-8 w-screen md:w-96 bottom-0 inset-y-full right-0 border-black h-auto inline-block transform -translate-y-px z-10">
+        <div className="absolute ml-8 w-mobile-orders md:w-96 bottom-0 inset-y-full right-0 border-black h-auto inline-block transform -translate-y-px z-10">
           <CartOrders orders={currentCartState.orders} />
         </div>
       )}

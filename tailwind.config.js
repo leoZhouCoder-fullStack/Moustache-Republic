@@ -13,6 +13,9 @@ module.exports = {
       backgroundColor: {
         header: '#F6F6F7',
       },
+      width: {
+        'mobile-orders': 'calc(100vh - 12rem)',
+      },
     },
   },
   variants: {
