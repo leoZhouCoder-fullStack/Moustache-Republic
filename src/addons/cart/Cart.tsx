@@ -33,14 +33,14 @@ const Cart = () => {
           })
         }}
         onMouseOver={() => {
-          // setCartState(preState => {
-          //   return { ...preState, open: true }
-          // })
+          setCartState(preState => {
+            return { ...preState, open: true }
+          })
         }}
         onMouseLeave={() => {
-          // setCartState(preState => {
-          //   return { ...preState, open: false }
-          // })
+          setCartState(preState => {
+            return { ...preState, open: false }
+          })
         }}
         style={{ borderBottomColor: '#ffffff' }}
       >

@@ -54,7 +54,7 @@ const ProductDetail = (props: ProductDetailProps) => {
       if (!find) {
         newOrders.push({ product: product, size: currentSize, number: 1 })
       }
-      console.log("[handlerAddToCart]: ", newOrders)
+      console.log('[handlerAddToCart]: ', newOrders)
       return { orders: newOrders, open: preCartState.open }
     })
   }
@@ -75,7 +75,7 @@ const ProductDetail = (props: ProductDetailProps) => {
             onSelectSize={setCurrentSize}
           />
         </div>
-        <Button label="ADD TO CART" onClick={handlerAddToCart} />
+        <Button label="ADD TO CART" onClick={handlerAddToCart} disabled={!currentSize} />
       </div>
     </div>
   )
